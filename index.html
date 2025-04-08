@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Tells the browser this is an HTML5 document -->
+  <meta charset="UTF-8" />
+  <!-- Sets the character encoding to UTF-8 so text displays correctly (like symbols, emojis, non-English characters) -->
+  
+  <!-- Makes sure the site scales properly on all screen sizes (like mobile) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Sets the title that appears in the browser tab -->
+  <title>My name - My Portfolio</title>
+  
+  <!-- Links your CSS file to style this page -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <!-- Website Header: shows your name and a short description -->
+  <header>
+    <h1>My Name</h1>
+    <p>Web Developer / Place Holder / Place Holder</p>
+  </header>
+
+  <!-- Projects Section: where you'll list things you've built -->
+  <section id="projects">
+    <h2>Projects</h2>
+    
+    <!-- One individual project (you can copy & paste this to add more) -->
+    <div class="project fade-in">
+      <h3>Project Title</h3>
+      <p>Short description of the project.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section: shows your email, GitHub, or other links -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+    <p>GitHub: <a href="#">github.com/yourusername</a></p>
+  </section>
+
+
+  <!-- java script-->
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  faders.forEach(el => observer.observe(el));
+</script>
+
+<!-- java script-->
+
+
+
+</body>
+</html>

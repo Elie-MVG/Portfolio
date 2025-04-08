@@ -1,0 +1,133 @@
+/* Set default font, remove default spacing, and choose background & text colors */
+body {
+    font-family: 'Inter', sans-serif; /* Clean, readable font */
+    margin: 0;  /* Removes default spacing around page */
+    padding: 0; /* Same as above, keeps layout clean */
+    background: #1e1e2f; /* Light grey background for subtle contrast */
+    color: #f0f0f0; /* Dark grey text instead of pure black (softer on the eyes) */
+  }
+  
+  /* Style the top section of the page */
+  header {
+    background: #292944; /* Dark background color */
+    color: #ffffff;     /* White text so it stands out */
+    padding: 2rem;    /* Adds space inside the header */
+    text-align: center; /* Centers the text horizontally */
+  }
+  
+  /* General section layout */
+  section {
+    padding: 2rem;          /* Adds space inside each section */
+    max-width: 800px;       /* Prevents the content from stretching too wide */
+    margin: auto;           /* Centers the section horizontally */
+  }
+  
+  /* Style for individual projects inside the Projects section */
+  .project {
+    background: #2f2f4f;                        /* White background to make it pop */
+    padding: 1rem;                            /* Inner spacing */
+    margin: 1rem 0;                           /* Space above and below each project */
+    border-left: 4px solid #8884ff;              /* A colored bar on the left side */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);     /* Soft shadow for depth */
+  }
+  
+  /* Style links */
+  a {
+    color: #89b4fa;         /* A cool blue for links */
+    text-decoration: none;  /* Removes underline */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Adds underline on hover to show it's clickable */
+  }
+
+
+  /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  /* Smooth hover transitions */
+  a, .project {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Glow effect on link hover */
+  a:hover {
+    color: #a6c8ff;
+    text-shadow: 0 0 3px #89b4fa;
+  }
+  
+  /* Project hover effect */
+  .project:hover {
+    transform: scale(1.04);              /* Slight zoom-in */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Stronger shadow */
+    border-left: 4px solid #a291ff;      /* Slight color shift */
+  }
+
+  /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+  /* ========== optional ========== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ========== optional end ==========*/
+  
+
+  #contact {
+    background: #1b1b2d;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #8884ff;
+    border-left: 1px solid #8884ff;
+    border-right: 1px solid #8884ff;
+  }
+  
+  #projects h2, #contact h2 {
+    border-bottom: 5px solid #8884ff;
+    padding-bottom: 0.5rem;
+  }
+  
+
+
+  /* ========== Responsive Design ========== */
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+  
+    header {
+      padding: 1.5rem;
+    }
+  
+    section {
+      padding: 1.5rem 1rem;
+    }
+  
+    .project {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  
+    #contact {
+      font-size: 0.95rem;
+    }
+  }
+  
